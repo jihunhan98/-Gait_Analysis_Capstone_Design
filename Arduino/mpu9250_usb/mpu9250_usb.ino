@@ -1,5 +1,6 @@
-//MPU9250 => SCL: A5, SCA: A4
+#include <Wire.h>
 
+//MPU9250 => SCL: A5, SCA: A4
 #include "Wire.h"
 #include "I2Cdev.h"
 #include "MPU9250.h"
@@ -56,9 +57,9 @@ void loop()
     float Ax = Axyz[0];
     float Ay = Axyz[1];
     float Az = Axyz[2];
-    float Gx = Gxyz[0];
-    float Gy = Gxyz[1];
-    float Gz = Gxyz[2];
+    float Gx = Gxyz[0] / 57.3;
+    float Gy = Gxyz[1] / 57.3;
+    float Gz = Gxyz[2] / 57.3;
     float Mx = Mxyz[0];
     float My = Mxyz[1];
     float Mz = Mxyz[2];
@@ -72,29 +73,14 @@ void loop()
     float Xh = (Mx * cos(pitch))+(My * sin(roll)*sin(pitch)) + (Mz * cos(roll) * sin(pitch));
     float yaw =  atan2(Yh, Xh);
 
-    Serial.print(Ax);
+    // Serial.print("Roll: ");
+    Serial.print(roll*57.3);
     Serial.print(',');
-    Serial.print(Ay);
+    // Serial.print(".    Pitch: ");
+    Serial.print(pitch*57.3);
     Serial.print(',');
-    Serial.print(Az);
-    Serial.print(',');
-    Serial.print(Gx);
-    Serial.print(',');
-    Serial.print(Gy);
-    Serial.print(',');
-    Serial.print(Gz);
-    Serial.print(',');
-    Serial.print(Mx);
-    Serial.print(',');
-    Serial.print(My);
-    Serial.print(',');
-    Serial.print(Mz);
-    Serial.print(',');
-    Serial.print(pitch);
-    Serial.print(',');
-    Serial.print(roll);
-    Serial.print(',');
-    Serial.print(yaw);
+    // Serial.print(".    yaw: ");
+    Serial.print(yaw*57.3);
     Serial.println();
     
 
