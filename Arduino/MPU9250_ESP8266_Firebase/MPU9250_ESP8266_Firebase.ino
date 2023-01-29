@@ -9,8 +9,8 @@
 #include <ESP8266WiFi.h>
 #define DHTPIN 5     // what digital pin we're connected to
 
-#define FIREBASE_HOST "gait-analysis-7350b-default-rtdb.asia-southeast1.firebasedatabase.app/" //Firebase URL
-#define FIREBASE_AUTH "Wk6jn6DzQUFF9wbuhxIEaK1OR64QJyOpFRd5kJGF" //Database password
+#define FIREBASE_HOST "" //Firebase URL
+#define FIREBASE_AUTH "" //Database password
 #define WIFI_SSID "jihun" //Wifi ID
 #define WIFI_PASSWORD "11111111" // Wifi Password
 
