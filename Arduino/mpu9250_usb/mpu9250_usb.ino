@@ -41,10 +41,10 @@ float altitude;
 void setup()
 {
     Wire.begin();
-    Serial.begin(38400); //PC-아두이노간
+    Serial.begin(115200); //PC-아두이노간
     accelgyro.initialize();
 
-    delay(10);
+    delay(50);
 }
 
 void loop()
