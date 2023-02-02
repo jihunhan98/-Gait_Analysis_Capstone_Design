@@ -44,7 +44,7 @@ void setup()
     Serial.begin(38400); //PC-아두이노간
     accelgyro.initialize();
 
-    delay(10);
+    delay(1000);
 }
 
 void loop()
@@ -85,6 +85,7 @@ void loop()
     
 
     delay(10);
+    
 
 }
 
