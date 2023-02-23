@@ -51,7 +51,7 @@ void loop() {
 
   //RAD_TO_DEG는 라디안에서 각도로 변경할 수 있는 변환 계수 (Radius to Degree)
   Serial.print(roll * RAD_TO_DEG);
-  Serial.print(", ");
+  Serial.print(",");
   Serial.print(pitch * RAD_TO_DEG);
   Serial.println();
 
