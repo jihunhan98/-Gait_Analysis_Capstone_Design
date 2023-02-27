@@ -50,10 +50,7 @@ void loop() {
 
 
   //RAD_TO_DEG는 라디안에서 각도로 변경할 수 있는 변환 계수 (Radius to Degree)
-  Serial.print(roll * RAD_TO_DEG);
-  Serial.print(",");
-  Serial.print(pitch * RAD_TO_DEG);
-  Serial.println();
+  Serial.println(roll * RAD_TO_DEG);
 
 
   //delay를 줄이면 줄일 수록 굴곡이 많아짐 (아마 정확한 값 측정도 불가능할 뿐더러 0.04초마다 점을 찍으니깐 선의 굴곡이 많ㅇ ㅣ만들어짐)
